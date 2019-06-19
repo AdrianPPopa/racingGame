@@ -8,38 +8,37 @@ public class App
 {
     public static void main( String[] args )
     {
-
         Engine engine = new Engine();
         engine.manufacturer = "Renault";
 
         Car car = new Car(engine);
-        car.name = "Dacia";
-        car.color = "blue";
+        car.setName("Dacia");
+        car.setColor("blue");
         car.doorCount = 4;
-        car.mileage = 9.5;
-        car.fuelLevel = 50;
-        car.running = true;
+        car.setMileage(9.5);
+        car.setFuelLevel(50);
+        car.setRunning(true);
 
 
         Car car1 = new Car(new Engine());
-        car1.name ="Volvo";
-        car1.color = "green";
+        car1.setName("Volvo");
+        car1.setColor("green");
         car1.doorCount = 4;
-        car1.mileage = 10;
-        car1.fuelLevel = 60;
-        car1.running = true;
+        car1.setMileage(10);
+        car1.setFuelLevel(60);
+        car1.setRunning(true);
 
         Car car2 = car;
 
-        System.out.println(car.name);
-        System.out.println(car2.name);
+        System.out.println(car.getName());
+        System.out.println(car2.getName());
 
         System.out.println("Changing Values...");
 
-        car.name = "Dacia Logan";
+        car.setName("Dacia Logan");
 
-        System.out.println(car.name);
-        System.out.println(car2.name);
+        System.out.println(car.getName());
+        System.out.println(car2.getName());
 
 
 
@@ -49,4 +48,6 @@ public class App
 
         double distance = car.accelerate(60, 0.5);
     }
+
+
 }
