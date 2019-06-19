@@ -47,6 +47,19 @@ public class App
 
 
         double distance = car.accelerate(60, 0.5);
+
+        System.out.println("Studying static variables ...");
+
+        //demo for static variables (class variables)
+//        car.totalCount = 1;
+//        System.out.println("Total count from car: " + car.totalCount);
+//
+//        car1.totalCount = 2;
+//        System.out.println("Total count from car: " + car.totalCount);
+//        System.out.println("Total count from car1: " + car1.totalCount);
+//        System.out.println("Total count from Vehicle class: " + Vehicle.totalCount);
+
+        System.out.println("Total cars ... " + car.getTotalCount());
     }
 
 
