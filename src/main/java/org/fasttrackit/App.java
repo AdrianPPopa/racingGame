@@ -9,7 +9,7 @@ public class App
     public static void main( String[] args )
     {
         Engine engine = new Engine();
-        engine.manufacturer = "Renault";
+        engine.setManufacturer("Renault");
 
         Car car = new Car(engine);
         car.setName("Dacia");
@@ -43,7 +43,7 @@ public class App
 
 
         System.out.println("Our engine...");
-        System.out.println(car.engine.manufacturer);
+        System.out.println(car.engine.getManufacturer());
 
 
         double distance = car.accelerate(60, 0.5);
@@ -62,7 +62,16 @@ public class App
         System.out.println("Total cars ... " + car.getTotalCount());
 
         car2.accelerate(100);
-    }
 
+        System.out.println("Today ...");
+
+        System.out.println(car.toString());
+
+        BatMobile batMobile = new BatMobile();
+        batMobile.setName("Cheating Vehicle");
+
+        batMobile.accelerate(60, 1);
+        car.accelerate(60, 1);
+    }
 
 }
