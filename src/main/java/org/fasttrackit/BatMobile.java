@@ -26,4 +26,5 @@ public class BatMobile extends Vehicle{
     protected Vehicle clone () throws  CloneNotSupportedException{
             return new Vehicle();
     }
+
 }
